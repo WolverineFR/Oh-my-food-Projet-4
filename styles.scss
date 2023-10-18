@@ -91,8 +91,25 @@ footer {
 .footer__box {
   @include common-styles;
   flex-direction: column;
-  gap: 10px;
-  padding: 20px;
+  gap: 16px;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  &__TitleLogo {
+    font-family: $font-tittle-logo;
+    font-weight: 400;
+    font-size: 18px;
+  }
+  &__ul {
+    &__li {
+      padding: 5px;
+      &__Resto,
+      &__Partenaire {
+        font-weight: 500;
+      }
+    }
+  }
 }
 
 // Icon du footer
@@ -101,7 +118,7 @@ footer {
   color: white;
   width: 11px;
   height: auto;
-  padding-right: 10px;
+  padding-right: 12px;
 }
 
 // desktop
