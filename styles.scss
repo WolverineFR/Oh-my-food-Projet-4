@@ -97,8 +97,8 @@ header {
 
 .header__locationBox {
   @include common-styles;
+  position: relative;
   width: 100%;
-  gap: 15px;
   height: 50px;
   background-color: #eaeaea;
   align-items: center;
@@ -108,6 +108,7 @@ header {
     border: none;
     outline: none;
     background: none;
+    padding-left: 16px;
 
     &::placeholder {
       font-size: 16px;
@@ -115,6 +116,7 @@ header {
       color: $grey--35;
     }
   }
+
 }
 
 // SECTION EXPLORER RESTO
@@ -178,8 +180,6 @@ header {
     &__cards {
       @include common-styles;
       align-items: center;
-      justify-content: center;
-      text-align: center;
       font-size: 16px;
       font-weight: 500;
       background-color: #f6f6f6;
@@ -187,6 +187,10 @@ header {
       width: 100%;
       border-radius: 20px;
       box-shadow: 0px 4px 15px 0px #00000026;
+
+      &__Title {
+        padding-left: 78px;
+      }
 
       &__number {
         @include common-styles;
@@ -213,13 +217,17 @@ header {
 .fa-mobile-screen-button,
 .fa-list-ul {
   color: $grey--7E;
-  font-size: 24px;
+  font-size: 20px;
+  position: absolute;
+  left: 65px;
 
 }
 
 .fa-store {
   color: $primary-color;
-  font-size: 24px;
+  font-size: 20px;
+  position: absolute;
+  left: 65px;
 }
 
 // LISTE RESTO
