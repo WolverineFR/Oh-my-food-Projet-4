@@ -1,66 +1,78 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>OhMyFood</title>
+  </head>
+  <!-- BODY -->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>OhMyFood</title>
-</head>
-<!-- BODY -->
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="header__box">
+        <a href="#" class="header__box__iconBack">
+          <i class="fa-solid fa-arrow-left"></i
+        ></a>
+        <h1 class="header__box__LogoTitle">ohmyfood</h1>
+      </div>
+      <div class="header__locationBox">
+        <i class="fa-solid fa-location-dot"></i>
+        <input
+          class="header__locationBox__city"
+          placeholder="Paris, Belleville"
+        />
+      </div>
+    </header>
+    <!-- SECTION -->
+    <section class="Explore-restaurants"></section>
 
-<body>
-  <!-- HEADER -->
-  <header>
-    <div class="header__box">
-      <a href="#" class="header__box__iconBack">
-        <i class="fa-solid fa-arrow-left"></i></a>
-      <h1 class="header__box__LogoTitle">ohmyfood</h1>
-    </div>
-    <div class="header__locationBox">
-      <i class="fa-solid fa-location-dot"></i>
-      <input class="header__locationBox__city" placeholder="Paris, Belleville"></input>
-    </div>
-  </header>
-  <!-- SECTION -->
-  <section class="Explore-restaurants"></section>
-
-
-
-
-
-  <footer>
-    <div class="footer__box">
-      <h4 class="footer__box__TitleLogo">ohmyfood</h4>
-      <ul class="footer__box__ul">
-        <li class="footer__box__ul__li">
-          <i class="fa-solid fa-utensils"></i>
-          <a class="footer__box__ul__li__Resto" href="#">Proposer un restaurant</a>
-        </li>
-        <li class="footer__box__ul__li">
-          <i class="fa-solid fa-handshake-angle"></i>
-          <a class="footer__box__ul__li__Partenaire" href="#">Devenir partenaire</a>
-        </li>
-      </ul>
-      <ul class="footer__box__ul">
-        <li class="footer__box__ul__li">
-          <a class="footer__box__ul__li__Legales" href="#">Mentions légales</a>
-        </li>
-        <li class="footer__box__ul__li">
-          <a class="footer__box__ul__li__Contact" href="#">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </footer>
-</body>
-
-
-
+    <footer>
+      <div class="footer__box">
+        <h4 class="footer__box__TitleLogo">ohmyfood</h4>
+        <ul class="footer__box__ul">
+          <li class="footer__box__ul__li">
+            <i class="fa-solid fa-utensils"></i>
+            <a class="footer__box__ul__li__Resto" href="#"
+              >Proposer un restaurant</a
+            >
+          </li>
+          <li class="footer__box__ul__li">
+            <i class="fa-solid fa-handshake-angle"></i>
+            <a class="footer__box__ul__li__Partenaire" href="#"
+              >Devenir partenaire</a
+            >
+          </li>
+        </ul>
+        <ul class="footer__box__ul">
+          <li class="footer__box__ul__li">
+            <a class="footer__box__ul__li__Legales" href="#"
+              >Mentions légales</a
+            >
+          </li>
+          <li class="footer__box__ul__li">
+            <a class="footer__box__ul__li__Contact" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
