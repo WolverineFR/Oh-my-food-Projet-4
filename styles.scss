@@ -20,7 +20,6 @@ $font-tittle-logo: "Shrikhand", serif;
 @mixin common-styles {
   display: flex;
   margin: 0;
-  width: 100%;
 }
 
 .fa-solid {
@@ -45,6 +44,7 @@ header {
 
 .header__box {
   @include common-styles;
+  width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
   position: relative;
@@ -67,6 +67,7 @@ header {
 
 .header__locationBox {
   @include common-styles;
+  width: 100%;
   gap: 15px;
   height: 50px;
   background-color: #eaeaea;
@@ -92,6 +93,7 @@ footer {
   @include common-styles;
   flex-direction: column;
   gap: 16px;
+  width: auto;
   padding-left: 22px;
   padding-right: 22px;
   padding-top: 25px;

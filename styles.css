@@ -80,9 +80,9 @@ footer {
 .footer__box {
   display: flex;
   margin: 0;
-  width: 100%;
   flex-direction: column;
   gap: 16px;
+  width: auto;
   padding-left: 22px;
   padding-right: 22px;
   padding-top: 25px;
