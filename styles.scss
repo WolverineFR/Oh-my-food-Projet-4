@@ -13,18 +13,46 @@ $green-color: #008766;
 $light-blue-color: #89c8fa;
 $dark-blue-color: #003a68;
 
+$grey--35: #353535;
+$grey--7E: #7E7E7E;
+
 $font-tittle-logo: "Shrikhand", serif;
 
-// mixin sert à stocker des settings complet
+// MIXIN sert à stocker des settings complet
 // @include + nom pour s'en servir
 @mixin common-styles {
   display: flex;
   margin: 0;
 }
 
-.fa-solid {
-  color: #353535;
+@mixin button_style {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(193.33deg, $primary-color -11.44%, $secondary-color 123.93%);
+  box-shadow: 0px 4px 10px 0px #00000040;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #ffffff;
+  padding-left: 25px;
+  padding-right: 25px;
 }
+
+@mixin button_style--hover {
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  box-shadow: 0px 4px 15px 0px #00000059;
+
+
+}
+
+.fa-solid {
+  color: $grey--35;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -34,6 +62,7 @@ li {
   list-style-type: none;
 }
 
+// HEADER
 header {
   display: flex;
   align-items: center;
@@ -55,6 +84,7 @@ header {
     position: absolute;
     display: none;
   }
+
   &__LogoTitle {
     font-family: $font-tittle-logo;
     color: #101010;
@@ -73,19 +103,123 @@ header {
   background-color: #eaeaea;
   align-items: center;
   justify-content: center;
+
   &__city {
     border: none;
     outline: none;
     background: none;
+
     &::placeholder {
       font-size: 16px;
       font-weight: 500;
+      color: $grey--35;
     }
   }
 }
 
+// SECTION EXPLORER RESTO
+.Explorer-restaurants {
+  @include common-styles;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  gap: 15px;
+  background-color: #f6f6f6;
+
+  &__Title {
+    font-size: 24px;
+    font-weight: 700;
+    width: 81%;
+  }
+
+  &__paragraphe {
+    font-weight: 300;
+    font-size: 18px;
+    color: $grey--35;
+  }
+
+  &__ButtonBox__Button {
+    @include button_style;
+
+    // VOIR POUR RENDRE PLUS BLANC LE FOND
+    &:hover {
+      @include button_style--hover;
+    }
+  }
+}
+
+// SECTION FONCTIONNEMENT
+.Fonctionnement {
+  @include common-styles;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 20px;
+
+  &__Title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__EtapesBox {
+    position: relative;
+    @include common-styles;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 7px;
+    margin-right: 7px;
+    gap: 20px;
+
+    &__cards {
+      @include common-styles;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+      background-color: #f6f6f6;
+      height: 72px;
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0px 4px 15px 0px #00000026;
+
+      &__number {
+        @include common-styles;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        font-weight: 500;
+        font-size: 14px;
+        color: #ffffff;
+        background-color: $primary-color;
+        border-radius: 20px;
+        padding: 2px;
+      }
+    }
+  }
+}
+
+// ICON FONCTIONNEMENT__ETAPESBOX__CARDS
+.fa-mobile-screen-button,
+.fa-list-ul {
+  color: $grey--7E;
+
+}
+
+.fa-store {
+  color: $primary-color;
+}
+
+// FOOTER
 footer {
-  background-color: #353535;
+  background-color: $grey--35;
   color: white;
 }
 
@@ -98,14 +232,17 @@ footer {
   padding-right: 22px;
   padding-top: 25px;
   padding-bottom: 25px;
+
   &__TitleLogo {
     font-family: $font-tittle-logo;
     font-weight: 400;
     font-size: 18px;
   }
+
   &__ul {
     &__li {
       padding: 5px;
+
       &__Resto,
       &__Partenaire {
         font-weight: 500;
