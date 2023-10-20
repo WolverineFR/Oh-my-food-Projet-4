@@ -162,6 +162,9 @@ header {
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
 }
+.Fonctionnement__EtapesBox__cards:hover .color-change--hover {
+  color: #9356dc;
+}
 .Fonctionnement__EtapesBox__cards__Title {
   padding-left: 78px;
 }
@@ -183,15 +186,9 @@ header {
 }
 
 .fa-mobile-screen-button,
-.fa-list-ul {
-  color: #7E7E7E;
-  font-size: 20px;
-  position: absolute;
-  left: 65px;
-}
-
+.fa-list-ul,
 .fa-store {
-  color: #9356dc;
+  color: #7E7E7E;
   font-size: 20px;
   position: absolute;
   left: 65px;
@@ -274,6 +271,21 @@ header {
 
 .fa-heart {
   font-size: 21px;
+}
+
+.heart-color-change {
+  position: absolute;
+  right: 20px;
+  overflow: hidden;
+}
+
+.heart-color-change::before {
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+}
+
+.heart-color-change:hover {
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 
 .fa-heart:hover {
