@@ -26,7 +26,7 @@ $font-tittle-logo: "Shrikhand", serif;
 }
 
 @mixin button_style {
-  border: none;
+  display: flex;
   outline: none;
   width: 100%;
   height: 50px;
@@ -35,20 +35,29 @@ $font-tittle-logo: "Shrikhand", serif;
   box-shadow: 0px 4px 10px 0px #00000040;
   font-weight: 500;
   font-size: 16px;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
   color: #ffffff;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 @mixin button_style--hover {
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%),
+  background: linear-gradient(200.64deg, $primary-color -5.2%, $secondary-color 110.74%),
     linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
   box-shadow: 0px 4px 15px 0px #00000059;
 
 
 }
 
+
+@mixin Like_button--hover {
+  color: linear-gradient(193.33deg, $primary-color -11.44%, $secondary-color 123.93%);
+
+}
+
+
+// incon (fa-solid) and others
 .fa-solid {
   color: $grey--35;
 }
@@ -126,7 +135,10 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 60px;
+  padding-top: 35px;
   gap: 15px;
   background-color: #f6f6f6;
 
@@ -142,12 +154,19 @@ header {
     color: $grey--35;
   }
 
-  &__ButtonBox__Button {
-    @include button_style;
+  &__ButtonBox {
+    width: 218px;
+    display: flex;
+    margin-top: 15px;
 
-    // VOIR POUR RENDRE PLUS BLANC LE FOND
-    &:hover {
-      @include button_style--hover;
+
+    &__Button {
+      @include button_style;
+
+      // VOIR POUR RENDRE PLUS BLANC LE FOND !!!!
+      &:hover {
+        @include button_style--hover;
+      }
     }
   }
 }
@@ -212,8 +231,6 @@ header {
 }
 
 // ICON FONCTIONNEMENT__ETAPESBOX__CARDS
-
-// VOIR POUR BIEN METTRE LES ICON !!!!
 .fa-mobile-screen-button,
 .fa-list-ul {
   color: $grey--7E;
@@ -239,6 +256,7 @@ header {
   padding-bottom: 50px;
   padding-left: 20px;
   padding-right: 20px;
+  gap: 30px;
 
   &__Title {
     font-size: 24px;
@@ -249,6 +267,7 @@ header {
     @include common-styles;
     flex-direction: column;
     position: relative;
+    gap: 20px;
 
     &__LienCard {
       min-width: 340px;
@@ -257,16 +276,68 @@ header {
       box-shadow: 0px 4px 15px 0px #0000001A;
       background-color: #ffffff;
 
-      // AJOUTER __CARDS et mettre les dimension plus petite
-      &__Cards__img {
-        height: 231px;
-        width: 346px;
-        object-fit: cover;
+
+      &__Cards {
+        @include common-styles;
+        flex-direction: column;
+        gap: 14px;
+
+        &__Nouveau {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $third-color;
+          color: $green-color;
+          height: 29px;
+          width: 80px;
+          border-radius: 2px;
+          box-shadow: 0px 2px 4px 0px #00000026;
+          font-size: 14px;
+          font-weight: 500;
+          right: 12px;
+          margin-top: 13px;
+        }
+
+        &__img {
+          height: 180px;
+          object-fit: cover;
+          border-top-right-radius: 15px;
+          border-top-left-radius: 15px;
+        }
+
+        &__CardInfo {
+          @include common-styles;
+          align-items: center;
+          justify-content: space-between;
+          padding-left: 15px;
+          padding-right: 20px;
+
+          &__Title-and-street {
+            &__Title {
+              font-weight: 700;
+              font-size: 18px;
+            }
+
+            &__Quartier {
+              font-size: 17px;
+              font-weight: 300;
+            }
+          }
+        }
       }
     }
   }
 }
 
+// VOIR POUR REMPLIR LES COEURS EN ANIMATION !!!!
+.fa-heart {
+  font-size: 21px;
+}
+
+.fa-heart:hover {
+  @include Like_button--hover;
+}
 
 // FOOTER
 footer {

@@ -82,7 +82,10 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 60px;
+  padding-top: 35px;
   gap: 15px;
   background-color: #f6f6f6;
 }
@@ -96,8 +99,13 @@ header {
   font-size: 18px;
   color: #353535;
 }
+.Explorer-restaurants__ButtonBox {
+  width: 218px;
+  display: flex;
+  margin-top: 15px;
+}
 .Explorer-restaurants__ButtonBox__Button {
-  border: none;
+  display: flex;
   outline: none;
   width: 100%;
   height: 50px;
@@ -106,13 +114,14 @@ header {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   font-weight: 500;
   font-size: 16px;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
   color: #ffffff;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .Explorer-restaurants__ButtonBox__Button:hover {
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  background: linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
 }
 
@@ -197,6 +206,7 @@ header {
   padding-bottom: 50px;
   padding-left: 20px;
   padding-right: 20px;
+  gap: 30px;
 }
 .Restaurants-listes__Title {
   font-size: 24px;
@@ -207,6 +217,7 @@ header {
   margin: 0;
   flex-direction: column;
   position: relative;
+  gap: 20px;
 }
 .Restaurants-listes__Box__LienCard {
   min-width: 340px;
@@ -215,11 +226,58 @@ header {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
   background-color: #ffffff;
 }
+.Restaurants-listes__Box__LienCard__Cards {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  gap: 14px;
+}
+.Restaurants-listes__Box__LienCard__Cards__Nouveau {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99e2d0;
+  color: #008766;
+  height: 29px;
+  width: 80px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  font-size: 14px;
+  font-weight: 500;
+  right: 12px;
+  margin-top: 13px;
+}
 .Restaurants-listes__Box__LienCard__Cards__img {
-  height: 231px;
-  width: 346px;
+  height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.Restaurants-listes__Box__LienCard__Cards__CardInfo {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 20px;
+}
+.Restaurants-listes__Box__LienCard__Cards__CardInfo__Title-and-street__Title {
+  font-weight: 700;
+  font-size: 18px;
+}
+.Restaurants-listes__Box__LienCard__Cards__CardInfo__Title-and-street__Quartier {
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.fa-heart {
+  font-size: 21px;
+}
+
+.fa-heart:hover {
+  color: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
 }
 
 footer {
