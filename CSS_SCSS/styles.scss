@@ -84,8 +84,9 @@ header {
 
   &__iconBack {
     padding: 10px;
+    padding-left: 20px;
     position: absolute;
-    display: none;
+    font-size: 25px;
   }
 
   &__LogoTitle {
@@ -239,7 +240,6 @@ header {
 }
 
 
-
 // LISTE RESTO
 .Restaurants-listes {
   @include common-styles;
@@ -323,7 +323,6 @@ header {
   }
 }
 
-// VOIR POUR REMPLIR LES COEURS EN ANIMATION !!!!
 .fa-heart {
   font-size: 21px;
 }
@@ -391,11 +390,135 @@ footer {
   padding-right: 12px;
 }
 
+
 // desktop
 @media (min-width: 1024px) {
   body {
     padding: 0;
     margin: 0 auto;
     max-width: 1440px;
+  }
+}
+
+// Autres pages avec menu
+
+.Photo-restaurant-Box {
+  &__Photo-plat {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+  }
+}
+
+// LISTE PLATS
+
+@mixin Entrees-plats-desserts {
+  @include common-styles;
+  flex-direction: column;
+  gap: 12px;
+
+  &__Title-box {
+    @include common-styles;
+    flex-direction: column;
+    height: 27px;
+    justify-content: space-between;
+
+    &__Title {
+      font-weight: 300;
+      font-size: 16px;
+    }
+
+    &__Trait {
+      width: 40px;
+      height: 3px;
+      background-color: $third-color;
+
+    }
+  }
+
+}
+
+@mixin Card-entrees-plats-desserts {
+  @include common-styles;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+  gap: 5px;
+  height: 69px;
+  background-color: white;
+  box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001A;
+  border-radius: 15px;
+
+  &__Title {
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 10px;
+  }
+
+  &__info-plat {
+    @include common-styles;
+    justify-content: space-between;
+
+    &__compostion {
+      font-size: 15px;
+      font-weight: 300;
+    }
+
+    &__Prix {
+      font-weight: 700;
+    }
+  }
+}
+
+.Liste-des-plats {
+  @include common-styles;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+  gap: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  &__Titre-et-likeButton {
+    @include common-styles;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 40px;
+
+    &__Title {
+      font-family: $font-tittle-logo;
+      font-weight: 400;
+      font-size: 28px;
+    }
+
+  }
+
+  // ENTREES
+  &__Entrees {
+    @include Entrees-plats-desserts;
+
+    &__card {
+      @include Card-entrees-plats-desserts;
+    }
+  }
+
+  // PLATS
+  &__Plats {
+    @include Entrees-plats-desserts;
+
+    &__card {
+      @include Card-entrees-plats-desserts;
+    }
+  }
+
+  // DESSERTS
+  &__Desserts {
+    @include Entrees-plats-desserts;
+
+    &__card {
+      @include Card-entrees-plats-desserts;
+    }
   }
 }

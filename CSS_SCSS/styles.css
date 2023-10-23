@@ -36,8 +36,9 @@ header {
 }
 .header__box__iconBack {
   padding: 10px;
+  padding-left: 20px;
   position: absolute;
-  display: none;
+  font-size: 25px;
 }
 .header__box__LogoTitle {
   font-family: "Shrikhand", serif;
@@ -330,4 +331,188 @@ footer {
     margin: 0 auto;
     max-width: 1440px;
   }
+}
+.Photo-restaurant-Box__Photo-plat {
+  width: 100%;
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.Liste-des-plats {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+  gap: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.Liste-des-plats__Titre-et-likeButton {
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 20px;
+  padding-top: 40px;
+}
+.Liste-des-plats__Titre-et-likeButton__Title {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-size: 28px;
+}
+.Liste-des-plats__Entrees {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  gap: 12px;
+}
+.Liste-des-plats__Entrees__Title-box {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  height: 27px;
+  justify-content: space-between;
+}
+.Liste-des-plats__Entrees__Title-box__Title {
+  font-weight: 300;
+  font-size: 16px;
+}
+.Liste-des-plats__Entrees__Title-box__Trait {
+  width: 40px;
+  height: 3px;
+  background-color: #99e2d0;
+}
+.Liste-des-plats__Entrees__card {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+  gap: 5px;
+  height: 69px;
+  background-color: white;
+  box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
+  border-radius: 15px;
+}
+.Liste-des-plats__Entrees__card__Title {
+  font-size: 18px;
+  font-weight: 500;
+  padding-top: 10px;
+}
+.Liste-des-plats__Entrees__card__info-plat {
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+}
+.Liste-des-plats__Entrees__card__info-plat__compostion {
+  font-size: 15px;
+  font-weight: 300;
+}
+.Liste-des-plats__Entrees__card__info-plat__Prix {
+  font-weight: 700;
+}
+.Liste-des-plats__Plats {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  gap: 12px;
+}
+.Liste-des-plats__Plats__Title-box {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  height: 27px;
+  justify-content: space-between;
+}
+.Liste-des-plats__Plats__Title-box__Title {
+  font-weight: 300;
+  font-size: 16px;
+}
+.Liste-des-plats__Plats__Title-box__Trait {
+  width: 40px;
+  height: 3px;
+  background-color: #99e2d0;
+}
+.Liste-des-plats__Plats__card {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+  gap: 5px;
+  height: 69px;
+  background-color: white;
+  box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
+  border-radius: 15px;
+}
+.Liste-des-plats__Plats__card__Title {
+  font-size: 18px;
+  font-weight: 500;
+  padding-top: 10px;
+}
+.Liste-des-plats__Plats__card__info-plat {
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+}
+.Liste-des-plats__Plats__card__info-plat__compostion {
+  font-size: 15px;
+  font-weight: 300;
+}
+.Liste-des-plats__Plats__card__info-plat__Prix {
+  font-weight: 700;
+}
+.Liste-des-plats__Desserts {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  gap: 12px;
+}
+.Liste-des-plats__Desserts__Title-box {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  height: 27px;
+  justify-content: space-between;
+}
+.Liste-des-plats__Desserts__Title-box__Title {
+  font-weight: 300;
+  font-size: 16px;
+}
+.Liste-des-plats__Desserts__Title-box__Trait {
+  width: 40px;
+  height: 3px;
+  background-color: #99e2d0;
+}
+.Liste-des-plats__Desserts__card {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+  gap: 5px;
+  height: 69px;
+  background-color: white;
+  box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1019607843);
+  border-radius: 15px;
+}
+.Liste-des-plats__Desserts__card__Title {
+  font-size: 18px;
+  font-weight: 500;
+  padding-top: 10px;
+}
+.Liste-des-plats__Desserts__card__info-plat {
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+}
+.Liste-des-plats__Desserts__card__info-plat__compostion {
+  font-size: 15px;
+  font-weight: 300;
+}
+.Liste-des-plats__Desserts__card__info-plat__Prix {
+  font-weight: 700;
 }/*# sourceMappingURL=styles.css.map */
