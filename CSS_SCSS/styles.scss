@@ -50,11 +50,6 @@ $font-tittle-logo: "Shrikhand", serif;
 
 }
 
-@mixin Like_button--hover {
-  color: linear-gradient(193.33deg, $primary-color -11.44%, $secondary-color 123.93%);
-
-}
-
 
 // incon (fa-solid) and others
 .fa-solid {
@@ -333,26 +328,25 @@ header {
   font-size: 21px;
 }
 
+
+// background indique la couleur de l'arriere plan, background clip indique que l'on veut mettre le background sur la police
+// webkit est une extension qui a la meme utilité que background-clip mais pour chrome
 .heart-color-change {
   position: absolute;
   right: 20px;
-  overflow: hidden;
-}
-
-.heart-color-change::before {
-  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  color: transparent;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
   -webkit-background-clip: text;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.heart-color-change:hover {
-
-  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  ;
-}
 
 .fa-heart:hover {
-  @include Like_button--hover;
+  opacity: 1;
 }
+
 
 // FOOTER
 footer {
