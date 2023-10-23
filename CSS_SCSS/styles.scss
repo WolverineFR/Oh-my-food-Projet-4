@@ -402,6 +402,11 @@ footer {
 
 // Autres pages avec menu
 
+.main-content-menu {
+  display: flex;
+  flex-direction: column;
+}
+
 .Photo-restaurant-Box {
   &__Photo-plat {
     width: 100%;
@@ -422,6 +427,7 @@ footer {
     flex-direction: column;
     height: 27px;
     justify-content: space-between;
+    opacity: 0;
 
     &__Title {
       font-weight: 300;
@@ -448,6 +454,7 @@ footer {
   background-color: white;
   box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001A;
   border-radius: 15px;
+  opacity: 0;
 
   &__Title {
     font-size: 18px;
@@ -479,13 +486,15 @@ footer {
   gap: 40px;
   padding-left: 10px;
   padding-right: 10px;
+  margin-top: -50px;
 
   &__Titre-et-likeButton {
     @include common-styles;
     justify-content: space-between;
     padding-left: 10px;
-    padding-right: 20px;
-    padding-top: 40px;
+    padding-right: 10px;
+    padding-top: 25px;
+    align-items: center;
 
     &__Title {
       font-family: $font-tittle-logo;
@@ -520,5 +529,83 @@ footer {
     &__card {
       @include Card-entrees-plats-desserts;
     }
+  }
+
+  // Bouton commander
+  &__Commander {
+    @include common-styles;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+
+    &__Button {
+      @include button_style;
+      width: 186px;
+    }
+
+    &__Button:hover {
+      @include button_style--hover;
+    }
+  }
+}
+
+// ANIMATION DE L'APPARITION DES CARDS du menu
+
+.Title-Box-Fade1 {
+  animation: fadeIn 1s ease-in-out 0.1s forwards;
+}
+
+.Card-Fade1 {
+  animation: fadeIn 1s ease-in-out 0.2s forwards;
+}
+
+.Card-Fade2 {
+  animation: fadeIn 1s ease-in-out 0.4s forwards;
+}
+
+.Card-Fade3 {
+  animation: fadeIn 1s ease-in-out 0.6s forwards;
+}
+
+.Title-Box-Fade2 {
+  animation: fadeIn 1s ease-in-out 0.7s forwards;
+}
+
+.Card-Fade4 {
+  animation: fadeIn 1s ease-in-out 0.8s forwards;
+}
+
+.Card-Fade5 {
+  animation: fadeIn 1s ease-in-out 1s forwards;
+}
+
+.Card-Fade6 {
+  animation: fadeIn 1s ease-in-out 1.2s forwards;
+}
+
+.Title-Box-Fade3 {
+  animation: fadeIn 1s ease-in-out 1.3s forwards;
+}
+
+.Card-Fade7 {
+  animation: fadeIn 1s ease-in-out 1.4s forwards;
+}
+
+.Card-Fade8 {
+  animation: fadeIn 1s ease-in-out 1.6s forwards;
+}
+
+.Card-Fade9 {
+  animation: fadeIn 1s ease-in-out 1.8s forwards;
+}
+
+// Fondu des cards de plats
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
