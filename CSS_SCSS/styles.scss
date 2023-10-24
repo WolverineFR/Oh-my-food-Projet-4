@@ -446,36 +446,92 @@ footer {
 
 @mixin Card-entrees-plats-desserts {
   @include common-styles;
-  flex-direction: column;
+  justify-content: space-between;
   padding-left: 10px;
-  padding-right: 10px;
   gap: 5px;
   height: 69px;
   background-color: white;
   box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001A;
   border-radius: 15px;
   opacity: 0;
-
-  &__Title {
-    font-size: 18px;
-    font-weight: 500;
-    padding-top: 10px;
-  }
+  overflow: hidden;
 
   &__info-plat {
     @include common-styles;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 5px;
+    overflow: hidden;
 
-    &__compostion {
+    &__Title {
+      font-size: 18px;
+      font-weight: 500;
+      padding-top: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &__composition {
       font-size: 15px;
       font-weight: 300;
-    }
-
-    &__Prix {
-      font-weight: 700;
+      white-space: nowrap;
+      /* Empêchez le texte de passer à la ligne white-space uniquement pour le texte */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      /* ajoute les 3 petits points si ça depasse */
     }
   }
+
+  &__Prix {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    padding-top: 25px;
+    margin-right: 10px;
+  }
+
+  // ANIMATION DU CHECKBOX
+  &__Checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $third-color;
+    height: 69px;
+    width: 59px;
+    margin-right: -60px;
+    transition: margin-right 0.6s ease-in-out;
+  }
+
+
 }
+
+// ICON checkbox
+.fa-circle-check {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.Checkbox-and-price {
+  display: flex;
+
+}
+
+
+.Liste-des-plats__Entrees__card:hover .Checkbox {
+  margin-right: 0;
+
+}
+
+.Liste-des-plats__Plats__card:hover .Checkbox {
+  margin-right: 0;
+
+}
+
+.Liste-des-plats__Desserts__card:hover .Checkbox {
+  margin-right: 0;
+
+}
+
 
 .Liste-des-plats {
   @include common-styles;
@@ -548,6 +604,7 @@ footer {
     }
   }
 }
+
 
 // ANIMATION DE L'APPARITION DES CARDS du menu
 
