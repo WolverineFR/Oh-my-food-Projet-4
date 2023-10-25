@@ -707,4 +707,58 @@ footer {
   to {
     opacity: 1;
   }
+}
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background: white;
+  opacity: 1;
+  animation: fadeOut 0.7s 2.5s forwards;
+  /* Lancez l'animation fadeOut après 3 secondes */
+  z-index: 999;
+}
+.loading-screen__Logo {
+  width: 200px;
+  height: auto;
+  margin-left: 10px;
+}
+.loading-screen__loading-bar {
+  width: 270px;
+  height: 3px;
+  background: #7E7E7E;
+  position: relative;
+  overflow: hidden;
+}
+.loading-screen__loading-bar::before {
+  content: "";
+  width: 100px;
+  height: 3px;
+  background: #ff79da;
+  position: absolute;
+  left: -34px;
+  animation: slide-bar 1.5s 10 ease;
+}
+
+@keyframes slide-bar {
+  50% {
+    transform: translateX(210px);
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    /* Cachez la div après la transition d'opacité */
+  }
 }/*# sourceMappingURL=styles.css.map */
