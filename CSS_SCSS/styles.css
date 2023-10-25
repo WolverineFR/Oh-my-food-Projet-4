@@ -53,25 +53,30 @@ header {
 .header__locationBox {
   display: flex;
   margin: 0;
-  position: relative;
   width: 100%;
   height: 50px;
   background-color: #eaeaea;
   align-items: center;
   justify-content: center;
 }
-.header__locationBox__city {
+.header__locationBox__container {
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+  margin-left: 32px;
+}
+.header__locationBox__container__city {
   border: none;
   outline: none;
   background: none;
   padding-left: 16px;
 }
-.header__locationBox__city::-moz-placeholder {
+.header__locationBox__container__city::-moz-placeholder {
   font-size: 16px;
   font-weight: 500;
   color: #353535;
 }
-.header__locationBox__city::placeholder {
+.header__locationBox__container__city::placeholder {
   font-size: 16px;
   font-weight: 500;
   color: #353535;
@@ -156,6 +161,7 @@ header {
   display: flex;
   margin: 0;
   align-items: center;
+  justify-content: center;
   font-size: 16px;
   font-weight: 500;
   background-color: #f6f6f6;
@@ -193,7 +199,7 @@ header {
   color: #7E7E7E;
   font-size: 20px;
   position: absolute;
-  left: 65px;
+  left: 76px;
 }
 
 .Restaurants-listes {
@@ -331,6 +337,42 @@ footer {
     padding: 0;
     margin: 0 auto;
     max-width: 1440px;
+  }
+  .Explorer-restaurants h2 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .Fonctionnement {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+  .Fonctionnement__EtapesBox {
+    flex-direction: row;
+  }
+  .Restaurants-listes {
+    padding-left: 140px;
+    padding-right: 140px;
+    padding-top: 30px;
+  }
+  .Restaurants-listes__Box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .Restaurants-listes__Box__LienCard {
+    width: 48%;
+  }
+  .footer__box {
+    flex-direction: row-reverse;
+    padding-top: 45px;
+    padding-bottom: 20px;
+  }
+  .footer__box2 {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer__box__ul {
+    display: flex;
   }
 }
 .main-content-menu {

@@ -102,25 +102,32 @@ header {
 
 .header__locationBox {
   @include common-styles;
-  position: relative;
   width: 100%;
   height: 50px;
   background-color: #eaeaea;
   align-items: center;
   justify-content: center;
 
-  &__city {
-    border: none;
-    outline: none;
-    background: none;
-    padding-left: 16px;
+  &__container {
+    @include common-styles;
+    justify-content: space-between;
+    margin-left: 32px;
 
-    &::placeholder {
-      font-size: 16px;
-      font-weight: 500;
-      color: $grey--35;
+    &__city {
+      border: none;
+      outline: none;
+      background: none;
+      padding-left: 16px;
+
+      &::placeholder {
+        font-size: 16px;
+        font-weight: 500;
+        color: $grey--35;
+      }
     }
   }
+
+
 
 }
 
@@ -195,6 +202,7 @@ header {
     &__cards {
       @include common-styles;
       align-items: center;
+      justify-content: center;
       font-size: 16px;
       font-weight: 500;
       background-color: #f6f6f6;
@@ -237,7 +245,7 @@ header {
   color: $grey--7E;
   font-size: 20px;
   position: absolute;
-  left: 65px;
+  left: 76px;
 }
 
 
@@ -352,6 +360,7 @@ header {
 footer {
   background-color: $grey--35;
   color: white;
+
 }
 
 .footer__box {
@@ -398,6 +407,53 @@ footer {
     padding: 0;
     margin: 0 auto;
     max-width: 1440px;
+  }
+
+  .Explorer-restaurants h2 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  .Fonctionnement {
+    padding-left: 140px;
+    padding-right: 140px;
+
+    &__EtapesBox {
+      flex-direction: row;
+    }
+  }
+
+  .Restaurants-listes {
+    padding-left: 140px;
+    padding-right: 140px;
+    padding-top: 30px;
+
+    &__Box {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &__LienCard {
+        width: 48%;
+      }
+    }
+  }
+
+
+  .footer__box {
+    flex-direction: row-reverse;
+    padding-top: 45px;
+    padding-bottom: 20px;
+  }
+
+
+  .footer__box2 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer__box__ul {
+    display: flex;
   }
 }
 
