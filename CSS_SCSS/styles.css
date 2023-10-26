@@ -135,7 +135,6 @@ header {
 .Fonctionnement {
   display: flex;
   margin: 0;
-  position: relative;
   flex-direction: column;
   padding-top: 40px;
   padding-bottom: 90px;
@@ -169,6 +168,7 @@ header {
   width: 100%;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  position: relative;
 }
 .Fonctionnement__EtapesBox__cards:hover .color-change--hover {
   color: #9356dc;
@@ -190,7 +190,7 @@ header {
   background-color: #9356dc;
   border-radius: 20px;
   padding: 2px;
-  left: 15px;
+  left: -14px;
 }
 
 .fa-mobile-screen-button,
@@ -199,7 +199,7 @@ header {
   color: #7E7E7E;
   font-size: 20px;
   position: absolute;
-  left: 76px;
+  left: 70px;
 }
 
 .Restaurants-listes {
@@ -221,7 +221,6 @@ header {
   display: flex;
   margin: 0;
   flex-direction: column;
-  position: relative;
   gap: 20px;
 }
 .Restaurants-listes__Box__LienCard {
@@ -236,6 +235,7 @@ header {
   margin: 0;
   flex-direction: column;
   gap: 14px;
+  position: relative;
 }
 .Restaurants-listes__Box__LienCard__Cards__Nouveau {
   position: absolute;
@@ -278,18 +278,19 @@ header {
 }
 
 .fa-heart {
-  font-size: 21px;
+  font-size: 23px;
 }
 
 .heart-color-change {
   position: absolute;
-  right: 20px;
+  right: 0.8em;
   color: transparent;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  font-size: 24px;
 }
 
 .fa-heart:hover {
@@ -332,49 +333,6 @@ footer {
   padding-right: 12px;
 }
 
-@media (min-width: 1024px) {
-  body {
-    padding: 0;
-    margin: 0 auto;
-    max-width: 1440px;
-  }
-  .Explorer-restaurants h2 {
-    font-size: 40px;
-    font-weight: 700;
-  }
-  .Fonctionnement {
-    padding-left: 140px;
-    padding-right: 140px;
-  }
-  .Fonctionnement__EtapesBox {
-    flex-direction: row;
-  }
-  .Restaurants-listes {
-    padding-left: 140px;
-    padding-right: 140px;
-    padding-top: 30px;
-  }
-  .Restaurants-listes__Box {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .Restaurants-listes__Box__LienCard {
-    width: 48%;
-  }
-  .footer__box {
-    flex-direction: row-reverse;
-    padding-top: 45px;
-    padding-bottom: 20px;
-  }
-  .footer__box2 {
-    display: flex;
-    flex-direction: row;
-  }
-  .footer__box__ul {
-    display: flex;
-  }
-}
 .main-content-menu {
   display: flex;
   flex-direction: column;
@@ -385,6 +343,24 @@ footer {
   height: 275px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.heart-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart-color-change-menu {
+  position: absolute;
+  color: transparent;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  font-size: 25px;
 }
 
 .fa-circle-check {
@@ -428,6 +404,7 @@ footer {
   padding-right: 10px;
   padding-top: 25px;
   align-items: center;
+  position: relative;
 }
 .Liste-des-plats__Titre-et-likeButton__Title {
   font-family: "Shrikhand", serif;
@@ -763,7 +740,7 @@ footer {
   gap: 40px;
   background: white;
   opacity: 1;
-  animation: fadeOut 0.7s 2.5s forwards;
+  animation: fadeOut 0.7s 2s forwards;
   /* Lancez l'animation fadeOut après 3 secondes */
   z-index: 999;
 }
@@ -802,5 +779,78 @@ footer {
     opacity: 0;
     visibility: hidden;
     /* Cachez la div après la transition d'opacité */
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+  .Explorer-restaurants h2 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .Fonctionnement {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+  .Fonctionnement__EtapesBox {
+    flex-direction: row;
+  }
+  .fa-mobile-screen-button,
+  .fa-list-ul,
+  .fa-store {
+    left: 50px;
+  }
+  .Restaurants-listes {
+    padding-left: 140px;
+    padding-right: 140px;
+    padding-top: 30px;
+  }
+  .Restaurants-listes__Box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .Restaurants-listes__Box__LienCard {
+    width: 48%;
+  }
+  .footer__box {
+    flex-direction: row-reverse;
+    padding-top: 45px;
+    padding-bottom: 20px;
+    gap: 60px;
+  }
+  .footer__box2 {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
+  .footer__box__ul {
+    display: flex;
+  }
+  .Photo-restaurant-Box__Photo-plat {
+    height: 383px;
+  }
+  .Liste-des-plats {
+    margin-left: 180px;
+    margin-right: 180px;
+  }
+  .Liste-des-plats__Titre-et-likeButton {
+    justify-content: center;
+    gap: 30px;
+  }
+  .Liste-des-plats__Entrees {
+    margin-left: 160px;
+    margin-right: 160px;
+  }
+  .Liste-des-plats__Plats {
+    margin-left: 160px;
+    margin-right: 160px;
+  }
+  .Liste-des-plats__Desserts {
+    margin-left: 160px;
+    margin-right: 160px;
   }
 }/*# sourceMappingURL=styles.css.map */

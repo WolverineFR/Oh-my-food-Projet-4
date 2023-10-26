@@ -177,7 +177,6 @@ header {
 // SECTION FONCTIONNEMENT
 .Fonctionnement {
   @include common-styles;
-  position: relative;
   flex-direction: column;
   padding-top: 40px;
   padding-bottom: 90px;
@@ -210,6 +209,7 @@ header {
       width: 100%;
       border-radius: 20px;
       box-shadow: 0px 4px 15px 0px #00000026;
+      position: relative;
 
       &:hover .color-change--hover {
         color: $primary-color;
@@ -232,7 +232,7 @@ header {
         background-color: $primary-color;
         border-radius: 20px;
         padding: 2px;
-        left: 15px;
+        left: -14px;
       }
     }
   }
@@ -245,7 +245,7 @@ header {
   color: $grey--7E;
   font-size: 20px;
   position: absolute;
-  left: 76px;
+  left: 70px;
 }
 
 
@@ -268,7 +268,6 @@ header {
   &__Box {
     @include common-styles;
     flex-direction: column;
-    position: relative;
     gap: 20px;
 
     &__LienCard {
@@ -283,6 +282,7 @@ header {
         @include common-styles;
         flex-direction: column;
         gap: 14px;
+        position: relative;
 
         &__Nouveau {
           position: absolute;
@@ -333,7 +333,7 @@ header {
 }
 
 .fa-heart {
-  font-size: 21px;
+  font-size: 23px;
 }
 
 
@@ -341,13 +341,14 @@ header {
 // webkit est une extension qui a la meme utilité que background-clip mais pour chrome
 .heart-color-change {
   position: absolute;
-  right: 20px;
+  right: 0.8em;
   color: transparent;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  font-size: 24px;
 }
 
 
@@ -400,63 +401,7 @@ footer {
   padding-right: 12px;
 }
 
-
-// desktop
-@media (min-width: 1024px) {
-  body {
-    padding: 0;
-    margin: 0 auto;
-    max-width: 1440px;
-  }
-
-  .Explorer-restaurants h2 {
-    font-size: 40px;
-    font-weight: 700;
-  }
-
-  .Fonctionnement {
-    padding-left: 140px;
-    padding-right: 140px;
-
-    &__EtapesBox {
-      flex-direction: row;
-    }
-  }
-
-  .Restaurants-listes {
-    padding-left: 140px;
-    padding-right: 140px;
-    padding-top: 30px;
-
-    &__Box {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-
-      &__LienCard {
-        width: 48%;
-      }
-    }
-  }
-
-
-  .footer__box {
-    flex-direction: row-reverse;
-    padding-top: 45px;
-    padding-bottom: 20px;
-  }
-
-
-  .footer__box2 {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .footer__box__ul {
-    display: flex;
-  }
-}
-
+// --------------------------------------------
 // Autres pages avec menu
 
 .main-content-menu {
@@ -470,6 +415,24 @@ footer {
     height: 275px;
     object-fit: cover;
   }
+}
+
+.heart-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart-color-change-menu {
+  position: absolute;
+  color: transparent;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  font-size: 25px;
 }
 
 // LISTE PLATS
@@ -608,6 +571,7 @@ footer {
     padding-right: 10px;
     padding-top: 25px;
     align-items: center;
+    position: relative;
 
     &__Title {
       font-family: $font-tittle-logo;
@@ -738,7 +702,7 @@ footer {
   gap: 40px;
   background: white;
   opacity: 1;
-  animation: fadeOut 0.7s 2.5s forwards;
+  animation: fadeOut 0.7s 2s forwards;
   /* Lancez l'animation fadeOut après 3 secondes */
   z-index: 999;
 
@@ -785,3 +749,104 @@ footer {
     /* Cachez la div après la transition d'opacité */
   }
 }
+
+
+// desktop and tablet RESPONSITIVITY
+@media (min-width: 1024px) {
+  body {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+
+  .Explorer-restaurants h2 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  .Fonctionnement {
+    padding-left: 140px;
+    padding-right: 140px;
+
+    &__EtapesBox {
+      flex-direction: row;
+    }
+  }
+
+  .fa-mobile-screen-button,
+  .fa-list-ul,
+  .fa-store {
+    left: 50px;
+  }
+
+  .Restaurants-listes {
+    padding-left: 140px;
+    padding-right: 140px;
+    padding-top: 30px;
+
+    &__Box {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &__LienCard {
+        width: 48%;
+      }
+    }
+  }
+
+
+  .footer__box {
+    flex-direction: row-reverse;
+    padding-top: 45px;
+    padding-bottom: 20px;
+    gap: 60px;
+  }
+
+
+  .footer__box2 {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .footer__box__ul {
+    display: flex;
+  }
+
+  // page menu responsive
+
+  .Photo-restaurant-Box {
+    &__Photo-plat {
+      height: 383px;
+    }
+  }
+
+  .Liste-des-plats {
+    margin-left: 180px;
+    margin-right: 180px;
+
+    &__Titre-et-likeButton {
+      justify-content: center;
+      gap: 30px;
+    }
+
+    &__Entrees {
+      margin-left: 160px;
+      margin-right: 160px;
+    }
+
+    &__Plats {
+      margin-left: 160px;
+      margin-right: 160px;
+    }
+
+    &__Desserts {
+      margin-left: 160px;
+      margin-right: 160px;
+    }
+  }
+
+}
+
+// FIN RESPONSIVE
